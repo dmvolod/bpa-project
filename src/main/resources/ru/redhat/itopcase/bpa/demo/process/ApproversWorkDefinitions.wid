@@ -1,0 +1,31 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+  [
+    "name" : "SelectManager",
+    "parameters" : [
+      "userId" : new StringDataType(),
+    ],
+    "displayName" : "Определение руководителя пользователя",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  
+  [
+    "name" : "DetectHumanResource",
+    "parameters" : [
+      "userId" : new StringDataType(),
+    ],
+    "displayName" : "Определение переченя сотрудников ОК",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  
+  [
+    "name" : "DetectSecurityDepartment",
+    "parameters" : [
+      "userId" : new StringDataType(),
+    ],
+    "displayName" : "Определение переченя сотрудников ОБ",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+]

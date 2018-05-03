@@ -1,0 +1,22 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+  [
+    "name" : "ApproveService",
+    "parameters" : [
+      "userId" : new StringDataType(),
+    ],
+    "displayName" : "Согласование отпуска",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  
+  [
+    "name" : "RejectService",
+    "parameters" : [
+      "userId" : new StringDataType(),
+    ],
+    "displayName" : "Отказ в согласовании отпуска",
+    "icon" : "defaultservicenodeicon.png"
+  ]
+]

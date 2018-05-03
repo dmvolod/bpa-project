@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<deployment-descriptor xsi:schemaLocation="http://www.jboss.org/jbpm deployment-descriptor.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <persistence-unit>org.jbpm.domain</persistence-unit>
+    <audit-persistence-unit>org.jbpm.domain</audit-persistence-unit>
+    <audit-mode>JPA</audit-mode>
+    <persistence-mode>JPA</persistence-mode>
+    <runtime-strategy>SINGLETON</runtime-strategy>
+    <marshalling-strategies/>
+    <event-listeners/>
+    <task-event-listeners/>
+    <globals/>
+    <work-item-handlers>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.instance.impl.demo.SystemOutWorkItemHandler()</identifier>
+            <parameters/>
+            <name>Log</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.bpmn2.ServiceTaskHandler(ksession, classLoader)</identifier>
+            <parameters/>
+            <name>ServiceTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.webservice.WebServiceWorkItemHandler(ksession, classLoader)</identifier>
+            <parameters/>
+            <name>WebService</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler(classLoader)</identifier>
+            <parameters/>
+            <name>Rest</name>
+        </work-item-handler>
+        <!-- Custom Work Item Handlers -->
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.SelectManagerWorkItemHandler()</identifier>
+            <parameters/>
+            <name>SelectManager</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.DetectHumanResourceWorkItemHandler()</identifier>
+            <parameters/>
+            <name>DetectHumanResource</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.DetectHumanResourceWorkItemHandler()</identifier>
+            <parameters/>
+            <name>DetectSecurityDepartment</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.DetectSecurityDepartmentWorkItemHandler()</identifier>
+            <parameters/>
+            <name>DetectHumanResource</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.ApproveWorkItemHandler()</identifier>
+            <parameters/>
+            <name>ApproveService</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new ru.redhat.itopcase.bpa.demo.wih.RejectWorkItemHandler()</identifier>
+            <parameters/>
+            <name>RejectService</name>
+        </work-item-handler>
+    </work-item-handlers>
+    <environment-entries/>
+    <configurations/>
+    <required-roles/>
+    <remoteable-classes/>
+    <limit-serialization-classes>true</limit-serialization-classes>
+</deployment-descriptor>

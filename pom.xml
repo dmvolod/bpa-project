@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ru.redhat.itopcase.bpa.demo</groupId>
+  <artifactId>bpa-project</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>bpa-project</name>
+  <description></description>
+  <url></url>
+  <dependencies>
+    <dependency>
+      <groupId>ru.redhat.itopcase.bpa.demo</groupId>
+      <artifactId>bpmn-service-project</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>ru.redhat.itopcase.bpa.demo</groupId>
+      <artifactId>bpmn-data-project</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>guvnor-m2-repo</id>
+      <name>Guvnor M2 Repo</name>
+      <url>file:///u01/app/jboss/jboss-eap-7.1/bin/repositories/kie/global</url>
+    </repository>
+  </repositories>
+</project>
