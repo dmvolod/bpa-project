@@ -56,5 +56,13 @@
         <source>SETTINGS</source>
       </metadata>
     </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>itopcase-nexus</id>
+        <url>https://nexus.itopcase.ru/nexus/content/repositories/releases/</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
   </repositories>
 </project-repositories>
